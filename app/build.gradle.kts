@@ -11,12 +11,12 @@ plugins {
 
 android {
     namespace = "com.kododake.aabrowser"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.kododake.aabrowser"
-        minSdk = 34        // Changed from 35 to 34 (Android 14)
-        targetSdk = 34     // Aligned to Android 14
+        minSdk = 34        // Allows Android 14 to parse and install the APK
+        targetSdk = 34     // Android 14 runtime behavior
         versionCode = 8
         versionName = "2.2"
 
