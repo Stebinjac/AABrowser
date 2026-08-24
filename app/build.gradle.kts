@@ -11,12 +11,12 @@ plugins {
 
 android {
     namespace = "com.kododake.aabrowser"
-    compileSdk = 37
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.kododake.aabrowser"
-        minSdk = 35
-        targetSdk = 37
+        minSdk = 34        // Changed from 35 to 34 (Android 14)
+        targetSdk = 34     // Aligned to Android 14
         versionCode = 8
         versionName = "2.2"
 
@@ -56,10 +56,9 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-
 
     buildFeatures {
         viewBinding = true
@@ -96,7 +95,7 @@ android {
 
 tasks.withType<KotlinJvmCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_21)
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
 
